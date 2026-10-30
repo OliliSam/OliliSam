@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Celestial Midnight Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#1e295d" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#0d1430" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#060914" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Radiant Gold Gradients -->
+    <linearGradient id="goldLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF4D0"/>
+      <stop offset="35%" stop-color="#FCD34D"/>
+      <stop offset="70%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+
+    <linearGradient id="goldDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="50%" stop-color="#92400E"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+
+    <!-- Divine Ray Glow -->
+    <linearGradient id="rayGlow" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#FCD34D" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FDE68A" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FEF3C7" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Parchment Page Gradient -->
+    <linearGradient id="pageGradLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ECE3D4"/>
+      <stop offset="85%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#D5C7B0"/>
+    </linearGradient>
+    <linearGradient id="pageGradRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D5C7B0"/>
+      <stop offset="15%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#ECE3D4"/>
+    </linearGradient>
+
+    <!-- Bookmark Crimson -->
+    <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="70%" stop-color="#B91C1C"/>
+      <stop offset="100%" stop-color="#7F1D1D"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="divineGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Deep Sacred Circular Frame -->
+  <circle cx="250" cy="250" r="235" fill="url(#bgGlow)" stroke="url(#goldLight)" stroke-width="5" filter="url(#softShadow)"/>
+  
+  <!-- Outer Sacred Geometry Ring -->
+  <circle cx="250" cy="250" r="222" fill="none" stroke="url(#goldLight)" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.65"/>
+  <circle cx="250" cy="250" r="214" fill="none" stroke="url(#goldLight)" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Celestial Divine Rays -->
+  <g opacity="0.6">
+    <polygon points="250,220 230,30 270,30" fill="url(#rayGlow)"/>
+    <polygon points="250,220 120,55 150,45" fill="url(#rayGlow)"/>
+    <polygon points="250,220 350,45 380,55" fill="url(#rayGlow)"/>
+    <polygon points="250,220 50,130 70,110" fill="url(#rayGlow)"/>
+    <polygon points="250,220 430,110 450,130" fill="url(#rayGlow)"/>
+  </g>
+
+  <!-- Radiant Halo behind the Bible -->
+  <circle cx="250" cy="215" r="115" fill="none" stroke="url(#goldLight)" stroke-width="3" opacity="0.5" filter="url(#divineGlow)"/>
+  <circle cx="250" cy="215" r="95" fill="none" stroke="url(#goldLight)" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Holy Bible Leather Base / Cover Shadow -->
+  <g filter="url(#softShadow)">
+    <!-- Book Back Cover -->
+    <path d="M 95,290 C 145,295 210,298 250,306 C 290,298 355,295 405,290 L 415,225 C 365,230 300,233 250,240 C 200,233 135,230 85,225 Z" fill="url(#goldDark)"/>
+    
+    <!-- Open Book Pages (Left Wing) -->
+    <path d="M 250,302 C 200,292 140,285 92,275 C 88,274 85,268 85,264 L 92,185 C 92,180 96,177 101,178 C 148,187 205,196 250,210 Z" fill="url(#pageGradLeft)"/>
+    <!-- Page edge layering left -->
+    <path d="M 94,278 C 140,288 200,295 250,305 L 250,302 C 200,292 140,285 92,275 Z" fill="#bfae94"/>
+
+    <!-- Open Book Pages (Right Wing) -->
+    <path d="M 250,302 C 300,292 360,285 408,275 C 412,274 415,268 415,264 L 408,185 C 408,180 404,177 399,178 C 352,187 295,196 250,210 Z" fill="url(#pageGradRight)"/>
+    <!-- Page edge layering right -->
+    <path d="M 406,278 C 360,288 300,295 250,305 L 250,302 C 300,292 360,285 408,275 Z" fill="#bfae94"/>
+
+    <!-- Scripture Text Lines (Stylized Left Page) -->
+    <g opacity="0.35" stroke="#4A3B2C" stroke-width="2.5" stroke-linecap="round">
+      <line x1="120" y1="202" x2="225" y2="218"/>
+      <line x1="118" y1="217" x2="223" y2="233"/>
+      <line x1="116" y1="232" x2="221" y2="248"/>
+      <line x1="114" y1="247" x2="219" y2="263"/>
+      <line x1="120" y1="262" x2="195" y2="274"/>
+    </g>
+
+    <!-- Scripture Text Lines (Stylized Right Page) -->
+    <g opacity="0.35" stroke="#4A3B2C" stroke-width="2.5" stroke-linecap="round">
+      <line x1="275" y1="218" x2="380" y2="202"/>
+      <line x1="277" y1="233" x2="382" y2="217"/>
+      <line x1="279" y1="248" x2="384" y2="232"/>
+      <line x1="281" y1="263" x2="386" y2="247"/>
+      <line x1="283" y1="278" x2="355" y2="265"/>
+    </g>
+
+    <!-- Book Center Fold Spine -->
+    <path d="M 249,209 Q 250,255 250,304 Q 251,255 251,209 Z" fill="#8B7355"/>
+
+    <!-- Crimson Silk Bookmark Ribbon -->
+    <path d="M 247,208 C 247,235 252,280 256,335 L 268,328 L 278,337 C 274,295 260,230 253,208 Z" fill="url(#ribbonGrad)"/>
+    <path d="M 256,335 L 268,328 L 268,330 L 256,337 Z" fill="#450a0a"/>
+  </g>
+
+  <!-- Luminous Sacred Cross Floating Above the Bible -->
+  <g filter="url(#divineGlow)">
+    <!-- Vertical Cross Beam -->
+    <rect x="244" y="115" width="12" height="68" rx="3" fill="url(#goldLight)"/>
+    <!-- Horizontal Cross Beam -->
+    <rect x="228" y="132" width="44" height="11" rx="3" fill="url(#goldLight)"/>
+    <!-- Cross Inner Highlights -->
+    <rect x="247" y="117" width="6" height="64" rx="2" fill="#FFFBEB"/>
+    <rect x="230" y="134" width="40" height="7" rx="2" fill="#FFFBEB"/>
+    <!-- Core Flare Sparkle -->
+    <circle cx="250" cy="138" r="9" fill="#FFF" opacity="0.9"/>
+  </g>
+
+  <!-- Sacred Little Sparkles -->
+  <g fill="#FFF" opacity="0.85">
+    <polygon points="150,130 153,137 160,140 153,143 150,150 147,143 140,140 147,137"/>
+    <polygon points="350,130 353,137 360,140 353,143 350,150 347,143 340,140 347,137"/>
+    <circle cx="210" cy="100" r="3"/>
+    <circle cx="290" cy="100" r="3"/>
+  </g>
+
+  <!-- App Title Banner -->
+  <g filter="url(#softShadow)">
+    <!-- Banner Plate -->
+    <rect x="75" y="365" width="350" height="62" rx="31" fill="#0c132c" stroke="url(#goldLight)" stroke-width="2.5"/>
+    <rect x="80" y="370" width="340" height="52" rx="26" fill="none" stroke="url(#goldLight)" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Title Text -->
+    <text x="250" y="402" text-anchor="middle" font-family="'Cinzel', 'Trajan Pro', 'Georgia', serif" font-size="28" font-weight="900" letter-spacing="4" fill="url(#goldLight)">BACK TO BIBLE</text>
+    <text x="250" y="420" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="9" font-weight="700" letter-spacing="3" fill="#E2E8F0" opacity="0.9">MASTER SCRIPTURE QUEST</text>
+  </g>
+
+  <!-- Small 4-point stars on banner -->
+  <polygon points="105,396 107,392 109,396 113,398 109,400 107,404 105,400 101,398" fill="url(#goldLight)"/>
+  <polygon points="395,396 397,392 399,396 403,398 399,400 397,404 395,400 391,398" fill="url(#goldLight)"/>
+</svg>

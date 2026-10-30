@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Olive Samuels - Software Engineer & Fullstack Developer. Dual expertise in fullstack web engineering, distributed microservices, and IT operations. Featuring interactive UI/UX gallery, 3D ambient animations, and private enterprise systems.">
+  <title>Olive Samuels | Software Engineer & Fullstack Developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Oxpier-Inspired 3D Ambient Mesh Canvas -->
+  <canvas id="bg3dCanvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand">
+        <img src="assets/olive.jpg" alt="Olive Samuels" class="brand-avatar">
+        <div>
+          <div class="brand-title">Olive Samuels</div>
+          <div class="brand-badge">Fullstack Engineer & IT Operations</div>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#gallery">UI/UX Gallery</a>
+        <a href="#projects">Repositories</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="icon-btn" aria-label="Toggle Theme">☀️</button>
+        <a href="Olive_Samuels_Fullstack_Portfolio.docx" download="Olive_Samuels_Fullstack_Portfolio.docx" class="btn-primary" title="Download Word Document">
+          📥 Download DOCX
+        </a>
+        <a href="Olive_Samuels_Fullstack_Portfolio.pdf" download="Olive_Samuels_Fullstack_Portfolio.pdf" class="btn-secondary" title="Download PDF Document">
+          📄 PDF
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-pill">
+          <span class="pulse-dot"></span>
+          <span>Available for Fullstack & Engineering Roles</span>
+        </div>
+
+        <h1 class="hero-title">
+          Engineering High-Performance Web Systems with <br>
+          <span class="gradient-text-olive"><span class="serif">Intuitive UI/UX</span> & Resilient Architecture.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          I'm <strong>Olive Samuels</strong>, a Software Engineer and Fullstack Developer with dual expertise in web development and technical systems operations. I build responsive clinical platforms, enterprise desktop suites, AI-driven applications, and scalable microservices.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#gallery" class="btn-primary">
+            🎨 Explore UI/UX Gallery
+          </a>
+          <a href="Olive_Samuels_Fullstack_Portfolio.docx" download="Olive_Samuels_Fullstack_Portfolio.docx" class="btn-secondary">
+            📥 Download Document (.docx)
+          </a>
+          <a href="#projects" class="btn-secondary">
+            🐙 Codebases & Branches
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section (Grounded in olivesamuels.cv) -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">About Olive Samuels</div>
+          <h2 class="section-title">Dual Expertise in Engineering & IT Operations</h2>
+          <p class="section-desc">
+            Bridging modern frontend interfaces, robust backend architectures, and secure IT infrastructure to build reliable, high-impact digital solutions.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile Card -->
+          <div class="about-card-profile">
+            <img src="assets/olive.jpg" alt="Olive Samuels" class="profile-large-img">
+            <h3 class="profile-name">Olive Samuels</h3>
+            <div class="profile-tagline">Software Engineer / IT Professional</div>
+            
+            <div class="honors-pills" style="justify-content: center; margin-bottom: 1rem;">
+              <span class="honor-badge">🏆 Top 10 Fellow (3MTT)</span>
+              <span class="honor-badge">⭐ Top 5 Intern</span>
+              <span class="honor-badge">🌟 Comeback Star</span>
+            </div>
+
+            <div class="profile-contact-list">
+              <div class="profile-contact-item">
+                <span>📍</span>
+                <span>Abuja, Nigeria</span>
+              </div>
+              <div class="profile-contact-item">
+                <span>✉️</span>
+                <a href="mailto:olivenkeechisamuels@gmail.com">olivenkeechisamuels@gmail.com</a>
+              </div>
+              <div class="profile-contact-item">
+                <span>📞</span>
+                <a href="tel:08070864314">08070864314</a>
+              </div>
+              <div class="profile-contact-item">
+                <span>🌐</span>
+                <a href="https://olivesamuels.cv" target="_blank" rel="noopener noreferrer">olivesamuels.cv</a>
+              </div>
+              <div class="profile-contact-item">
+                <span>🐙</span>
+                <a href="https://github.com/OliliSam" target="_blank" rel="noopener noreferrer">github.com/OliliSam</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio & Career Milestones -->
+          <div class="about-content-block">
+            <div class="about-bio-card">
+              <p class="about-bio-text">
+                "Highly motivated and detail-oriented IT professional with a dual expertise in fullstack web development and technical support, bringing a proven ability to build responsive applications, optimize system performance, and resolve complex technical issues. Passionate about leveraging technology to enhance operational efficiency and elevate user experiences, I excel in both independent innovation and collaborative environments to deliver high-impact solutions."
+              </p>
+            </div>
+
+            <!-- Experience Timeline -->
+            <div>
+              <h3 class="timeline-title">💼 Career Milestones & Experience</h3>
+              <div class="experience-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-role-row">
+                    <span class="timeline-role">IT Operations & Systems Development</span>
+                    <span class="timeline-org">Oxpier Consults</span>
+                  </div>
+                  <p class="timeline-desc">
+                    Managing IT operations, operational tooling, and internal systems development for business automation, client infrastructure, and enterprise workflows.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-role-row">
+                    <span class="timeline-role">Fullstack Developer (Project)</span>
+                    <span class="timeline-org">Medmate (Southville International School & Colleges) • Manila, Philippines</span>
+                  </div>
+                  <p class="timeline-desc">
+                    Independently designed and developed a fullstack medication scheduling and reminder system engineered for caregivers in nursing homes and assisted care facilities — featuring automated dosage round alerts, electronic medication administration tracking (eMAR), hands-free voice notes, and role-based controls, reducing caregiver workload by an estimated 20%.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-role-row">
+                    <span class="timeline-role">Fullstack Developer</span>
+                    <span class="timeline-org">3MTT Cohort 3.0 (Buddy Chat App) • Abuja, Nigeria</span>
+                  </div>
+                  <p class="timeline-desc">
+                    Engineered and deployed a scalable real-time messaging application utilizing Socket.IO, Node.js, Express.js, Prisma ORM, Docker Compose, and PostgreSQL for peer collaboration.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-role-row">
+                    <span class="timeline-role">Software Development Intern</span>
+                    <span class="timeline-org">CWW Tech Africa (Urban Wear Project)</span>
+                  </div>
+                  <p class="timeline-desc">
+                    Developed a responsive e-commerce platform using HTML, CSS, JavaScript, and Figma UI/UX workflows; recognized among the Top 5 Interns for outstanding performance.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-role-row">
+                    <span class="timeline-role">IT Support Intern</span>
+                    <span class="timeline-org">Ecoloelements</span>
+                  </div>
+                  <p class="timeline-desc">
+                    Provided critical technical support for hardware and software issues across 50+ users, maintained server security, and ensured 99.9% uptime for local systems.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education & Certifications -->
+            <div>
+              <h3 class="timeline-title">🎓 Education & Certifications</h3>
+              <div class="experience-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-role-row">
+                    <span class="timeline-role">Software Development, Cohort 11.0</span>
+                    <span class="timeline-org">CWW Tech Africa • December 2025 – March 2026</span>
+                  </div>
+                  <p class="timeline-desc">
+                    Comprehensive fullstack development curriculum covering modern frontend engineering, backend microservices, responsive design workflows in Figma, and collaborative Git delivery; recognized among the Top 5 Interns for outstanding performance.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-role-row">
+                    <span class="timeline-role">Software Development Fellowship</span>
+                    <span class="timeline-org">Three Million Technical Talents (3MTT) Nigeria / NITDA</span>
+                  </div>
+                  <p class="timeline-desc">
+                    Federal Ministry of Communications, Innovation & Digital Economy / UNICCON Group. Certified with Completion Credential (Verify ID: FE/26/1106226085).
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-role-row">
+                    <span class="timeline-role">Artificial Intelligence & Software Engineering</span>
+                    <span class="timeline-org">Southville International School and Colleges • Manila, Philippines</span>
+                  </div>
+                  <p class="timeline-desc">
+                    International academic coursework in applied artificial intelligence and software architecture.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive UI/UX & Application Walkthroughs Gallery Section -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Interactive Application Walkthroughs</div>
+          <h2 class="section-title">UI/UX Systems & Live Interactive Simulators</h2>
+          <p class="section-desc">
+            Explore high-tech system avatars, live simulated clinical workflows, cryptographic signature pads, real-time Gemini AI tutors, and interactive audio engines.
+          </p>
+        </div>
+
+        <div class="gallery-controls">
+          <button class="gallery-filter-btn active" data-gallery-filter="all">All Systems</button>
+          <button class="gallery-filter-btn" data-gallery-filter="live-ui">Live Interactive PWAs</button>
+          <button class="gallery-filter-btn" data-gallery-filter="enterprise">Enterprise Systems</button>
+        </div>
+
+        <!-- Gallery Grid (Rendered dynamically via app.js) -->
+        <div class="gallery-grid" id="galleryContainer">
+          <!-- Rendered dynamically with 3D cards and interactive modals -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Repositories Showcase (Public, Private, Branched, Forked) -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Ecosystem & Repositories</div>
+          <h2 class="section-title">Codebases, Branches & Systems Design</h2>
+          <p class="section-desc">
+            Complete architectural view of all client platforms, private enterprise codebases, specialized Git branches, and forked contributions.
+          </p>
+        </div>
+
+        <!-- Controls Bar -->
+        <div class="controls-bar">
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All Repositories</button>
+            <button class="filter-btn" data-filter="flagship">⭐ Flagships</button>
+            <button class="filter-btn" data-filter="private">🔒 Private Enterprise</button>
+            <button class="filter-btn" data-filter="branched">🌿 Multi-Branch</button>
+            <button class="filter-btn" data-filter="forked">🍴 Forks & Contributed</button>
+            <button class="filter-btn" data-filter="frontend">Frontend & PWA</button>
+            <button class="filter-btn" data-filter="backend">Backend & Microservices</button>
+            <button class="filter-btn" data-filter="systems">Systems & C#</button>
+          </div>
+
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search by name, stack, or branch...">
+          </div>
+        </div>
+
+        <!-- Projects Grid (Rendered dynamically via app.js) -->
+        <div class="projects-grid" id="projectsContainer">
+          <!-- Rendered dynamically via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect -->
+    <section id="contact" class="footer">
+      <div class="container footer-content">
+        <h2 class="footer-title">Let's Build Something Exceptional</h2>
+        <p class="footer-subtitle">
+          Looking for a fullstack engineer with proven experience in scalable web applications, distributed systems, and IT operations? Let's connect.
+        </p>
+
+        <div class="footer-actions">
+          <a href="mailto:olivenkeechisamuels@gmail.com" class="btn-primary">
+            ✉️ Email Olive Samuels
+          </a>
+          <a href="https://olivesamuels.cv" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            📄 Visit olivesamuels.cv
+          </a>
+          <a href="https://github.com/OliliSam" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            🐙 GitHub @OliliSam
+          </a>
+        </div>
+
+        <div class="footer-copyright">
+          <p>© 2026 Olive Samuels. Abuja, Nigeria.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Architectural Case Study & Interactive UI Modal -->
+  <dialog id="caseStudyModal" class="case-study-dialog">
+    <div id="modalContent">
+      <!-- Populated dynamically via app.js -->
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

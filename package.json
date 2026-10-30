@@ -1,0 +1,25 @@
+{
+  "name": "olive-samuels-fullstack-portfolio",
+  "version": "1.0.0",
+  "description": "Professional Full-Stack Developer & Systems Architect Portfolio for Olive Samuels (OliliSam)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "fullstack",
+    "developer",
+    "software-engineer",
+    "systems-architect",
+    "react",
+    "typescript",
+    "node",
+    "rust",
+    "tauri",
+    "microservices"
+  ],
+  "author": "Olive Samuels <olivenkeechisamuels@gmail.com>",
+  "license": "MIT"
+}
