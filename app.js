@@ -156,6 +156,35 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // Mobile Touch Listeners for Fluid 3D Mesh
+    window.addEventListener('touchmove', (e) => {
+      if (e.touches && e.touches[0]) {
+        targetMouseX = e.touches[0].clientX;
+        targetMouseY = e.touches[0].clientY;
+        isHovering = true;
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchstart', (e) => {
+      if (e.touches && e.touches[0]) {
+        targetMouseX = e.touches[0].clientX;
+        targetMouseY = e.touches[0].clientY;
+        isHovering = true;
+        shockwaves.push({
+          x: e.touches[0].clientX,
+          y: e.touches[0].clientY,
+          radius: 8,
+          maxRadius: Math.min(W, H) * 0.4,
+          speed: 7.0,
+          intensity: 0.9
+        });
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      isHovering = false;
+    }, { passive: true });
+
     // Animation Render Loop
     function frame() {
       t += 0.016;
@@ -387,6 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Interactive 3D Card Perspective Tilt
   // ==========================================
   function attach3DTilt(elements) {
+    if (window.matchMedia('(hover: none)').matches) return;
     elements.forEach(card => {
       card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -428,6 +458,38 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggleBtn.innerHTML = theme === 'dark' ? '☀️' : '🌙';
     themeToggleBtn.setAttribute('title', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
   }
+
+  // ==========================================
+  // Mobile Navigation Drawer Controller
+  // ==========================================
+  const mobileToggle = document.getElementById('mobileMenuToggle');
+  const closeMobileBtn = document.getElementById('closeMobileNavBtn');
+  const mobileDrawer = document.getElementById('mobileNavDrawer');
+  const mobileBackdrop = document.getElementById('mobileNavBackdrop');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  function openMobileNav() {
+    if (mobileDrawer && mobileBackdrop) {
+      mobileDrawer.classList.add('open');
+      mobileBackdrop.classList.add('open');
+      mobileDrawer.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeMobileNav() {
+    if (mobileDrawer && mobileBackdrop) {
+      mobileDrawer.classList.remove('open');
+      mobileBackdrop.classList.remove('open');
+      mobileDrawer.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (mobileToggle) mobileToggle.addEventListener('click', openMobileNav);
+  if (closeMobileBtn) closeMobileBtn.addEventListener('click', closeMobileNav);
+  if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeMobileNav);
+  mobileLinks.forEach(link => link.addEventListener('click', closeMobileNav));
 
   // ==========================================
   // Helper: High-Tech Project Insignia SVGs
@@ -660,7 +722,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <input type="range" id="clyRiskSlider" min="1" max="15" value="3" style="flex: 1; accent-color: var(--olive-gold);">
                 <span id="clyRiskLabel" style="font-family: var(--font-mono); font-weight: 700; color: var(--olive-gold); width: 45px;">3%</span>
               </div>
-              <div id="clyRiskGrid" style="display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; max-width: 440px; margin: 0 auto 1.25rem;">
+              <div id="clyRiskGrid" class="cly-risk-grid">
                 <!-- Populated dynamically -->
               </div>
               <div id="clyRiskStats" style="background: #040805; padding: 10px 14px; border-radius: 6px; font-family: var(--font-mono); font-size: 0.82rem; display: flex; justify-content: space-between;">
@@ -746,7 +808,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <p class="wt-box-desc">
                 Select an elderly resident and configure their scheduled medication regimen for caregiver rounds:
               </p>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1rem;">
+              <div class="wt-grid-2">
                 <div>
                   <label style="font-size: 0.8rem; color: var(--text-muted);">Resident & Ward Room:</label>
                   <select id="mmResidentSelect" class="search-input" style="padding: 6px 10px;">

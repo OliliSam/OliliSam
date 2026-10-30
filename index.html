@@ -35,15 +35,48 @@
 
       <div class="nav-actions">
         <button id="themeToggleBtn" class="icon-btn" aria-label="Toggle Theme">☀️</button>
-        <a href="Olive_Samuels_Fullstack_Portfolio.docx" download="Olive_Samuels_Fullstack_Portfolio.docx" class="btn-primary" title="Download Word Document">
+        <a href="Olive_Samuels_Fullstack_Portfolio.docx" download="Olive_Samuels_Fullstack_Portfolio.docx" class="btn-primary nav-download-btn" title="Download Word Document">
           📥 Download DOCX
         </a>
-        <a href="Olive_Samuels_Fullstack_Portfolio.pdf" download="Olive_Samuels_Fullstack_Portfolio.pdf" class="btn-secondary" title="Download PDF Document">
+        <a href="Olive_Samuels_Fullstack_Portfolio.pdf" download="Olive_Samuels_Fullstack_Portfolio.pdf" class="btn-secondary nav-download-btn" title="Download PDF Document">
           📄 PDF
         </a>
+        <button id="mobileMenuToggle" class="icon-btn mobile-menu-toggle" aria-label="Toggle navigation menu">
+          ☰
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobileNavDrawer" class="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <div class="brand">
+        <img src="assets/olive.jpg" alt="Olive Samuels" class="brand-avatar">
+        <div>
+          <div class="brand-title">Olive Samuels</div>
+          <div class="brand-badge">Fullstack & IT Ops</div>
+        </div>
+      </div>
+      <button id="closeMobileNavBtn" class="icon-btn" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#about" class="mobile-nav-link">👤 About & Experience</a>
+      <a href="#gallery" class="mobile-nav-link">🎨 UI/UX Interactive Gallery</a>
+      <a href="#projects" class="mobile-nav-link">💻 Complete Repositories</a>
+      <a href="#contact" class="mobile-nav-link">📬 Contact & Hire</a>
+    </nav>
+    <div class="mobile-nav-downloads">
+      <div class="mobile-nav-download-title">📄 Download Resume Documents:</div>
+      <a href="Olive_Samuels_Fullstack_Portfolio.docx" download="Olive_Samuels_Fullstack_Portfolio.docx" class="btn-primary" style="width: 100%; justify-content: center;">
+        📥 Download Word (.DOCX)
+      </a>
+      <a href="Olive_Samuels_Fullstack_Portfolio.pdf" download="Olive_Samuels_Fullstack_Portfolio.pdf" class="btn-secondary" style="width: 100%; justify-content: center;">
+        📄 Download PDF (.PDF)
+      </a>
+    </div>
+  </div>
+  <div id="mobileNavBackdrop" class="mobile-nav-backdrop"></div>
 
   <main>
     <!-- Hero Section -->
